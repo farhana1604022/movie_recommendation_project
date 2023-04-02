@@ -2,8 +2,10 @@ import streamlit as st
 import pickle
 import requests  # to hit the API
 st.title("Ripa's Movie Recommender System")
-movies = pickle.load(open('movie_list.pkl', 'rb'))
-similarity = pickle.load(open('similarity.pkl', 'rb'))
+#file = open(r'C:\path\to\your\filename.ext') //absolute path
+
+movies = pickle.load(open(r'C:\Users\ASUS\PycharmProjects\movieproject\movie_list.pkl', 'rb'))
+similarity = pickle.load(open(r'C:\Users\ASUS\PycharmProjects\movieproject\similarity.pkl', 'rb'))
 movie_list = movies['title'].values
 selected_movie = st.selectbox(
     "Type or select a movie from the dropdown",
