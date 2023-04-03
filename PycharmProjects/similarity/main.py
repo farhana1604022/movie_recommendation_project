@@ -4,8 +4,8 @@ import requests  # to hit the API
 st.title("Ripa's Movie Recommender System")
 #file = open(r'C:\path\to\your\filename.ext') //absolute path
 
-movies = pickle.load(open(r'https://github.com/farhana1604022/movie_recommendation_project/blob/master/PycharmProjects/similarity/movie_list.pkl', 'rb'))
-similarity = pickle.load(open(r'https://github.com/farhana1604022/movie_recommendation_project/blob/master/PycharmProjects/similarity/similarity.pkl', 'rb'))
+movies = open(r'https://github.com/farhana1604022/movie_recommendation_project/blob/master/PycharmProjects/similarity/movie_list.pkl', 'rb')
+similarity = open(r'https://github.com/farhana1604022/movie_recommendation_project/blob/master/PycharmProjects/similarity/similarity.pkl', 'rb')
 movie_list = movies['title'].values
 selected_movie = st.selectbox(
     "Type or select a movie from the dropdown",
